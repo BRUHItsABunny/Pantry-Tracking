@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.bunnytechsolutions.pantrytracker.models";
+option java_outer_classname = "PantryTrackerModels";
+
+import "google/protobuf/timestamp.proto";
+
+// Ensure DB can filter by: id, barcode, name, brand
+message Product {
+    string id = 1;
+    string barcode = 2;
+    string brand = 3;
+    string name = 4;
+    string size = 5;
+    string ingredients = 6;
+    string nutritionFacts = 7;
+    repeated string images = 8;
+}
+
+// Ensure DB can filter by: id, productID
+message Entry {
+    string id = 1;
+    string productID = 2;
+    int32 portions = 3;
+    google.protobuf.Timestamp expires = 4;
+    bool reminder = 5;
+    bool portionReminder = 6;
+    repeated google.protobuf.Timestamp expirePortionReminders = 7;
+}
+
+// Ensure DB can filter by: id, name
+message Pantry {
+    string id = 1;
+    string name = 2;
+    reserved 3 to 9;
+    // Entries as list of entryId
+    repeated string entries = 10;
+}

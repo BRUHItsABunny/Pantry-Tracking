@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProtobufSettings">
+    <option name="importRoots">
+      <list>
+        <ImportRootEntry>
+          <option name="path" value="file://$USER_HOME$/protobuf/src" />
+        </ImportRootEntry>
+        <ImportRootEntry>
+          <option name="path" value="file://$USER_HOME$/protobuf/src/google" />
+        </ImportRootEntry>
+      </list>
+    </option>
+  </component>
+</project>
