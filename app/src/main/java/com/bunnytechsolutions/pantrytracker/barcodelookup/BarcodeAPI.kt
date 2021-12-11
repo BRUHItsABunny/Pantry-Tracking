@@ -13,7 +13,7 @@ class BarcodeAPI(private val apiKey: String) {
     fun lookup(productBarcode: String) : Product? {
         val reqURL = "https://api.github.help".toHttpUrlOrNull()!!.newBuilder()
             .addQueryParameter("barcode", productBarcode)
-            .addQueryParameter("barcode", apiKey)
+            .addQueryParameter("key", apiKey)
             .build()
         val req = Request.Builder().url(reqURL).build()
         val response = client.newCall(req).execute()
