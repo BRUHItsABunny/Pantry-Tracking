@@ -5,7 +5,7 @@ package com.bunnytechsolutions.pantrytracker.models;
 
 /**
  * <pre>
- * Ensure DB can filter by: id, barcode, name, brand
+ * Ensure DB can filter by: barcode, name, brand
  * </pre>
  *
  * Protobuf type {@code Product}
@@ -20,11 +20,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Product() {
-    id_ = "";
     barcode_ = "";
     brand_ = "";
     name_ = "";
-    size_ = "";
     ingredients_ = "";
     nutritionFacts_ = "";
     images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -64,46 +62,34 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            id_ = s;
+            barcode_ = s;
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            barcode_ = s;
+            brand_ = s;
             break;
           }
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            brand_ = s;
+            name_ = s;
             break;
           }
           case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            name_ = s;
+            ingredients_ = s;
             break;
           }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            size_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            ingredients_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
             nutritionFacts_ = s;
             break;
           }
-          case 66: {
+          case 50: {
             java.lang.String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               images_ = new com.google.protobuf.LazyStringArrayList();
@@ -147,48 +133,10 @@ private static final long serialVersionUID = 0L;
             com.bunnytechsolutions.pantrytracker.models.Product.class, com.bunnytechsolutions.pantrytracker.models.Product.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object id_;
-  /**
-   * <code>string id = 1;</code>
-   * @return The id.
-   */
-  @java.lang.Override
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      id_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string id = 1;</code>
-   * @return The bytes for id.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      id_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int BARCODE_FIELD_NUMBER = 2;
+  public static final int BARCODE_FIELD_NUMBER = 1;
   private volatile java.lang.Object barcode_;
   /**
-   * <code>string barcode = 2;</code>
+   * <code>string barcode = 1;</code>
    * @return The barcode.
    */
   @java.lang.Override
@@ -205,7 +153,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string barcode = 2;</code>
+   * <code>string barcode = 1;</code>
    * @return The bytes for barcode.
    */
   @java.lang.Override
@@ -223,10 +171,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int BRAND_FIELD_NUMBER = 3;
+  public static final int BRAND_FIELD_NUMBER = 2;
   private volatile java.lang.Object brand_;
   /**
-   * <code>string brand = 3;</code>
+   * <code>string brand = 2;</code>
    * @return The brand.
    */
   @java.lang.Override
@@ -243,7 +191,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string brand = 3;</code>
+   * <code>string brand = 2;</code>
    * @return The bytes for brand.
    */
   @java.lang.Override
@@ -261,10 +209,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int NAME_FIELD_NUMBER = 4;
+  public static final int NAME_FIELD_NUMBER = 3;
   private volatile java.lang.Object name_;
   /**
-   * <code>string name = 4;</code>
+   * <code>string name = 3;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -281,7 +229,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 4;</code>
+   * <code>string name = 3;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -299,48 +247,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SIZE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object size_;
-  /**
-   * <code>string size = 5;</code>
-   * @return The size.
-   */
-  @java.lang.Override
-  public java.lang.String getSize() {
-    java.lang.Object ref = size_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      size_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string size = 5;</code>
-   * @return The bytes for size.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getSizeBytes() {
-    java.lang.Object ref = size_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      size_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int INGREDIENTS_FIELD_NUMBER = 6;
+  public static final int INGREDIENTS_FIELD_NUMBER = 4;
   private volatile java.lang.Object ingredients_;
   /**
-   * <code>string ingredients = 6;</code>
+   * <code>string ingredients = 4;</code>
    * @return The ingredients.
    */
   @java.lang.Override
@@ -357,7 +267,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string ingredients = 6;</code>
+   * <code>string ingredients = 4;</code>
    * @return The bytes for ingredients.
    */
   @java.lang.Override
@@ -375,10 +285,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int NUTRITIONFACTS_FIELD_NUMBER = 7;
+  public static final int NUTRITIONFACTS_FIELD_NUMBER = 5;
   private volatile java.lang.Object nutritionFacts_;
   /**
-   * <code>string nutritionFacts = 7;</code>
+   * <code>string nutritionFacts = 5;</code>
    * @return The nutritionFacts.
    */
   @java.lang.Override
@@ -395,7 +305,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string nutritionFacts = 7;</code>
+   * <code>string nutritionFacts = 5;</code>
    * @return The bytes for nutritionFacts.
    */
   @java.lang.Override
@@ -413,10 +323,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int IMAGES_FIELD_NUMBER = 8;
+  public static final int IMAGES_FIELD_NUMBER = 6;
   private com.google.protobuf.LazyStringList images_;
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @return A list containing the images.
    */
   public com.google.protobuf.ProtocolStringList
@@ -424,14 +334,14 @@ private static final long serialVersionUID = 0L;
     return images_;
   }
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @return The count of images.
    */
   public int getImagesCount() {
     return images_.size();
   }
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @param index The index of the element to return.
    * @return The images at the given index.
    */
@@ -439,7 +349,7 @@ private static final long serialVersionUID = 0L;
     return images_.get(index);
   }
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @param index The index of the value to return.
    * @return The bytes of the images at the given index.
    */
@@ -462,29 +372,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, barcode_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, barcode_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brand_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, brand_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, brand_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(size_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, size_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ingredients_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, ingredients_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ingredients_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nutritionFacts_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, nutritionFacts_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, nutritionFacts_);
     }
     for (int i = 0; i < images_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, images_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, images_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -495,26 +399,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, barcode_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, barcode_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brand_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, brand_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, brand_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(size_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, size_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ingredients_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, ingredients_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ingredients_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nutritionFacts_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, nutritionFacts_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, nutritionFacts_);
     }
     {
       int dataSize = 0;
@@ -539,16 +437,12 @@ private static final long serialVersionUID = 0L;
     }
     com.bunnytechsolutions.pantrytracker.models.Product other = (com.bunnytechsolutions.pantrytracker.models.Product) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
     if (!getBarcode()
         .equals(other.getBarcode())) return false;
     if (!getBrand()
         .equals(other.getBrand())) return false;
     if (!getName()
         .equals(other.getName())) return false;
-    if (!getSize()
-        .equals(other.getSize())) return false;
     if (!getIngredients()
         .equals(other.getIngredients())) return false;
     if (!getNutritionFacts()
@@ -566,16 +460,12 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId().hashCode();
     hash = (37 * hash) + BARCODE_FIELD_NUMBER;
     hash = (53 * hash) + getBarcode().hashCode();
     hash = (37 * hash) + BRAND_FIELD_NUMBER;
     hash = (53 * hash) + getBrand().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + SIZE_FIELD_NUMBER;
-    hash = (53 * hash) + getSize().hashCode();
     hash = (37 * hash) + INGREDIENTS_FIELD_NUMBER;
     hash = (53 * hash) + getIngredients().hashCode();
     hash = (37 * hash) + NUTRITIONFACTS_FIELD_NUMBER;
@@ -681,7 +571,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Ensure DB can filter by: id, barcode, name, brand
+   * Ensure DB can filter by: barcode, name, brand
    * </pre>
    *
    * Protobuf type {@code Product}
@@ -721,15 +611,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      id_ = "";
-
       barcode_ = "";
 
       brand_ = "";
 
       name_ = "";
-
-      size_ = "";
 
       ingredients_ = "";
 
@@ -764,11 +650,9 @@ private static final long serialVersionUID = 0L;
     public com.bunnytechsolutions.pantrytracker.models.Product buildPartial() {
       com.bunnytechsolutions.pantrytracker.models.Product result = new com.bunnytechsolutions.pantrytracker.models.Product(this);
       int from_bitField0_ = bitField0_;
-      result.id_ = id_;
       result.barcode_ = barcode_;
       result.brand_ = brand_;
       result.name_ = name_;
-      result.size_ = size_;
       result.ingredients_ = ingredients_;
       result.nutritionFacts_ = nutritionFacts_;
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -824,10 +708,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.bunnytechsolutions.pantrytracker.models.Product other) {
       if (other == com.bunnytechsolutions.pantrytracker.models.Product.getDefaultInstance()) return this;
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
-        onChanged();
-      }
       if (!other.getBarcode().isEmpty()) {
         barcode_ = other.barcode_;
         onChanged();
@@ -838,10 +718,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        onChanged();
-      }
-      if (!other.getSize().isEmpty()) {
-        size_ = other.size_;
         onChanged();
       }
       if (!other.getIngredients().isEmpty()) {
@@ -892,85 +768,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object id_ = "";
-    /**
-     * <code>string id = 1;</code>
-     * @return The id.
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     * @return The bytes for id.
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setId(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      id_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string id = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearId() {
-      
-      id_ = getDefaultInstance().getId();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string id = 1;</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      id_ = value;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object barcode_ = "";
     /**
-     * <code>string barcode = 2;</code>
+     * <code>string barcode = 1;</code>
      * @return The barcode.
      */
     public java.lang.String getBarcode() {
@@ -986,7 +786,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string barcode = 2;</code>
+     * <code>string barcode = 1;</code>
      * @return The bytes for barcode.
      */
     public com.google.protobuf.ByteString
@@ -1003,7 +803,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string barcode = 2;</code>
+     * <code>string barcode = 1;</code>
      * @param value The barcode to set.
      * @return This builder for chaining.
      */
@@ -1018,7 +818,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string barcode = 2;</code>
+     * <code>string barcode = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearBarcode() {
@@ -1028,7 +828,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string barcode = 2;</code>
+     * <code>string barcode = 1;</code>
      * @param value The bytes for barcode to set.
      * @return This builder for chaining.
      */
@@ -1046,7 +846,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object brand_ = "";
     /**
-     * <code>string brand = 3;</code>
+     * <code>string brand = 2;</code>
      * @return The brand.
      */
     public java.lang.String getBrand() {
@@ -1062,7 +862,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string brand = 3;</code>
+     * <code>string brand = 2;</code>
      * @return The bytes for brand.
      */
     public com.google.protobuf.ByteString
@@ -1079,7 +879,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string brand = 3;</code>
+     * <code>string brand = 2;</code>
      * @param value The brand to set.
      * @return This builder for chaining.
      */
@@ -1094,7 +894,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string brand = 3;</code>
+     * <code>string brand = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearBrand() {
@@ -1104,7 +904,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string brand = 3;</code>
+     * <code>string brand = 2;</code>
      * @param value The bytes for brand to set.
      * @return This builder for chaining.
      */
@@ -1122,7 +922,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 4;</code>
+     * <code>string name = 3;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1138,7 +938,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 4;</code>
+     * <code>string name = 3;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1155,7 +955,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 4;</code>
+     * <code>string name = 3;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1170,7 +970,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 4;</code>
+     * <code>string name = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1180,7 +980,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 4;</code>
+     * <code>string name = 3;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1196,85 +996,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object size_ = "";
-    /**
-     * <code>string size = 5;</code>
-     * @return The size.
-     */
-    public java.lang.String getSize() {
-      java.lang.Object ref = size_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        size_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string size = 5;</code>
-     * @return The bytes for size.
-     */
-    public com.google.protobuf.ByteString
-        getSizeBytes() {
-      java.lang.Object ref = size_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        size_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string size = 5;</code>
-     * @param value The size to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSize(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      size_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string size = 5;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearSize() {
-      
-      size_ = getDefaultInstance().getSize();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string size = 5;</code>
-     * @param value The bytes for size to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSizeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      size_ = value;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object ingredients_ = "";
     /**
-     * <code>string ingredients = 6;</code>
+     * <code>string ingredients = 4;</code>
      * @return The ingredients.
      */
     public java.lang.String getIngredients() {
@@ -1290,7 +1014,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string ingredients = 6;</code>
+     * <code>string ingredients = 4;</code>
      * @return The bytes for ingredients.
      */
     public com.google.protobuf.ByteString
@@ -1307,7 +1031,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string ingredients = 6;</code>
+     * <code>string ingredients = 4;</code>
      * @param value The ingredients to set.
      * @return This builder for chaining.
      */
@@ -1322,7 +1046,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string ingredients = 6;</code>
+     * <code>string ingredients = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearIngredients() {
@@ -1332,7 +1056,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string ingredients = 6;</code>
+     * <code>string ingredients = 4;</code>
      * @param value The bytes for ingredients to set.
      * @return This builder for chaining.
      */
@@ -1350,7 +1074,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object nutritionFacts_ = "";
     /**
-     * <code>string nutritionFacts = 7;</code>
+     * <code>string nutritionFacts = 5;</code>
      * @return The nutritionFacts.
      */
     public java.lang.String getNutritionFacts() {
@@ -1366,7 +1090,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string nutritionFacts = 7;</code>
+     * <code>string nutritionFacts = 5;</code>
      * @return The bytes for nutritionFacts.
      */
     public com.google.protobuf.ByteString
@@ -1383,7 +1107,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string nutritionFacts = 7;</code>
+     * <code>string nutritionFacts = 5;</code>
      * @param value The nutritionFacts to set.
      * @return This builder for chaining.
      */
@@ -1398,7 +1122,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string nutritionFacts = 7;</code>
+     * <code>string nutritionFacts = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearNutritionFacts() {
@@ -1408,7 +1132,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string nutritionFacts = 7;</code>
+     * <code>string nutritionFacts = 5;</code>
      * @param value The bytes for nutritionFacts to set.
      * @return This builder for chaining.
      */
@@ -1432,7 +1156,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @return A list containing the images.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1440,14 +1164,14 @@ private static final long serialVersionUID = 0L;
       return images_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @return The count of images.
      */
     public int getImagesCount() {
       return images_.size();
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param index The index of the element to return.
      * @return The images at the given index.
      */
@@ -1455,7 +1179,7 @@ private static final long serialVersionUID = 0L;
       return images_.get(index);
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param index The index of the value to return.
      * @return The bytes of the images at the given index.
      */
@@ -1464,7 +1188,7 @@ private static final long serialVersionUID = 0L;
       return images_.getByteString(index);
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param index The index to set the value at.
      * @param value The images to set.
      * @return This builder for chaining.
@@ -1480,7 +1204,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param value The images to add.
      * @return This builder for chaining.
      */
@@ -1495,7 +1219,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param values The images to add.
      * @return This builder for chaining.
      */
@@ -1508,7 +1232,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearImages() {
@@ -1518,7 +1242,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param value The bytes of the images to add.
      * @return This builder for chaining.
      */

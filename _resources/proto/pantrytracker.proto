@@ -6,22 +6,20 @@ option java_outer_classname = "PantryTrackerModels";
 
 import "google/protobuf/timestamp.proto";
 
-// Ensure DB can filter by: id, barcode, name, brand
+// Ensure DB can filter by: barcode, name, brand
 message Product {
-    string id = 1;
-    string barcode = 2;
-    string brand = 3;
-    string name = 4;
-    string size = 5;
-    string ingredients = 6;
-    string nutritionFacts = 7;
-    repeated string images = 8;
+    string barcode = 1;
+    string brand = 2;
+    string name = 3;
+    string ingredients = 4;
+    string nutritionFacts = 5;
+    repeated string images = 6;
 }
 
-// Ensure DB can filter by: id, productID
+// Ensure DB can filter by: id, productID, expires
 message Entry {
     string id = 1;
-    string productID = 2;
+    string productCode = 2;
     int32 portions = 3;
     google.protobuf.Timestamp expires = 4;
     bool reminder = 5;

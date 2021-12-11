@@ -5,7 +5,7 @@ package com.bunnytechsolutions.pantrytracker.models;
 
 /**
  * <pre>
- * Ensure DB can filter by: id, productID
+ * Ensure DB can filter by: id, productID, expires
  * </pre>
  *
  * Protobuf type {@code Entry}
@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private Entry() {
     id_ = "";
-    productID_ = "";
+    productCode_ = "";
     expirePortionReminders_ = java.util.Collections.emptyList();
   }
 
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            productID_ = s;
+            productCode_ = s;
             break;
           }
           case 24: {
@@ -178,38 +178,38 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PRODUCTID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object productID_;
+  public static final int PRODUCTCODE_FIELD_NUMBER = 2;
+  private volatile java.lang.Object productCode_;
   /**
-   * <code>string productID = 2;</code>
-   * @return The productID.
+   * <code>string productCode = 2;</code>
+   * @return The productCode.
    */
   @java.lang.Override
-  public java.lang.String getProductID() {
-    java.lang.Object ref = productID_;
+  public java.lang.String getProductCode() {
+    java.lang.Object ref = productCode_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      productID_ = s;
+      productCode_ = s;
       return s;
     }
   }
   /**
-   * <code>string productID = 2;</code>
-   * @return The bytes for productID.
+   * <code>string productCode = 2;</code>
+   * @return The bytes for productCode.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getProductIDBytes() {
-    java.lang.Object ref = productID_;
+      getProductCodeBytes() {
+    java.lang.Object ref = productCode_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      productID_ = b;
+      productCode_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -332,8 +332,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productID_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productID_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productCode_);
     }
     if (portions_ != 0) {
       output.writeInt32(3, portions_);
@@ -362,8 +362,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productID_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productID_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productCode_);
     }
     if (portions_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -402,8 +402,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getId()
         .equals(other.getId())) return false;
-    if (!getProductID()
-        .equals(other.getProductID())) return false;
+    if (!getProductCode()
+        .equals(other.getProductCode())) return false;
     if (getPortions()
         != other.getPortions()) return false;
     if (hasExpires() != other.hasExpires()) return false;
@@ -430,8 +430,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
-    hash = (37 * hash) + PRODUCTID_FIELD_NUMBER;
-    hash = (53 * hash) + getProductID().hashCode();
+    hash = (37 * hash) + PRODUCTCODE_FIELD_NUMBER;
+    hash = (53 * hash) + getProductCode().hashCode();
     hash = (37 * hash) + PORTIONS_FIELD_NUMBER;
     hash = (53 * hash) + getPortions();
     if (hasExpires()) {
@@ -545,7 +545,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Ensure DB can filter by: id, productID
+   * Ensure DB can filter by: id, productID, expires
    * </pre>
    *
    * Protobuf type {@code Entry}
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       id_ = "";
 
-      productID_ = "";
+      productCode_ = "";
 
       portions_ = 0;
 
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
       com.bunnytechsolutions.pantrytracker.models.Entry result = new com.bunnytechsolutions.pantrytracker.models.Entry(this);
       int from_bitField0_ = bitField0_;
       result.id_ = id_;
-      result.productID_ = productID_;
+      result.productCode_ = productCode_;
       result.portions_ = portions_;
       if (expiresBuilder_ == null) {
         result.expires_ = expires_;
@@ -706,8 +706,8 @@ private static final long serialVersionUID = 0L;
         id_ = other.id_;
         onChanged();
       }
-      if (!other.getProductID().isEmpty()) {
-        productID_ = other.productID_;
+      if (!other.getProductCode().isEmpty()) {
+        productCode_ = other.productCode_;
         onChanged();
       }
       if (other.getPortions() != 0) {
@@ -854,78 +854,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object productID_ = "";
+    private java.lang.Object productCode_ = "";
     /**
-     * <code>string productID = 2;</code>
-     * @return The productID.
+     * <code>string productCode = 2;</code>
+     * @return The productCode.
      */
-    public java.lang.String getProductID() {
-      java.lang.Object ref = productID_;
+    public java.lang.String getProductCode() {
+      java.lang.Object ref = productCode_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        productID_ = s;
+        productCode_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string productID = 2;</code>
-     * @return The bytes for productID.
+     * <code>string productCode = 2;</code>
+     * @return The bytes for productCode.
      */
     public com.google.protobuf.ByteString
-        getProductIDBytes() {
-      java.lang.Object ref = productID_;
+        getProductCodeBytes() {
+      java.lang.Object ref = productCode_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        productID_ = b;
+        productCode_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string productID = 2;</code>
-     * @param value The productID to set.
+     * <code>string productCode = 2;</code>
+     * @param value The productCode to set.
      * @return This builder for chaining.
      */
-    public Builder setProductID(
+    public Builder setProductCode(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      productID_ = value;
+      productCode_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string productID = 2;</code>
+     * <code>string productCode = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearProductID() {
+    public Builder clearProductCode() {
       
-      productID_ = getDefaultInstance().getProductID();
+      productCode_ = getDefaultInstance().getProductCode();
       onChanged();
       return this;
     }
     /**
-     * <code>string productID = 2;</code>
-     * @param value The bytes for productID to set.
+     * <code>string productCode = 2;</code>
+     * @param value The bytes for productCode to set.
      * @return This builder for chaining.
      */
-    public Builder setProductIDBytes(
+    public Builder setProductCodeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      productID_ = value;
+      productCode_ = value;
       onChanged();
       return this;
     }

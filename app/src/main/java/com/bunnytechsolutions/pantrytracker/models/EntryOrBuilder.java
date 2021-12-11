@@ -20,16 +20,16 @@ public interface EntryOrBuilder extends
       getIdBytes();
 
   /**
-   * <code>string productID = 2;</code>
-   * @return The productID.
+   * <code>string productCode = 2;</code>
+   * @return The productCode.
    */
-  java.lang.String getProductID();
+  java.lang.String getProductCode();
   /**
-   * <code>string productID = 2;</code>
-   * @return The bytes for productID.
+   * <code>string productCode = 2;</code>
+   * @return The bytes for productCode.
    */
   com.google.protobuf.ByteString
-      getProductIDBytes();
+      getProductCodeBytes();
 
   /**
    * <code>int32 portions = 3;</code>

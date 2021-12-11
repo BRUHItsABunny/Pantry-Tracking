@@ -40,20 +40,20 @@ object EntryKt {
     }
 
     /**
-     * <code>string productID = 2;</code>
+     * <code>string productCode = 2;</code>
      */
-    var productID: kotlin.String
-      @JvmName("getProductID")
-      get() = _builder.getProductID()
-      @JvmName("setProductID")
+    var productCode: kotlin.String
+      @JvmName("getProductCode")
+      get() = _builder.getProductCode()
+      @JvmName("setProductCode")
       set(value) {
-        _builder.setProductID(value)
+        _builder.setProductCode(value)
       }
     /**
-     * <code>string productID = 2;</code>
+     * <code>string productCode = 2;</code>
      */
-    fun clearProductID() {
-      _builder.clearProductID()
+    fun clearProductCode() {
+      _builder.clearProductCode()
     }
 
     /**

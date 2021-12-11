@@ -23,24 +23,7 @@ object ProductKt {
     internal fun _build(): com.bunnytechsolutions.pantrytracker.models.Product = _builder.build()
 
     /**
-     * <code>string id = 1;</code>
-     */
-    var id: kotlin.String
-      @JvmName("getId")
-      get() = _builder.getId()
-      @JvmName("setId")
-      set(value) {
-        _builder.setId(value)
-      }
-    /**
-     * <code>string id = 1;</code>
-     */
-    fun clearId() {
-      _builder.clearId()
-    }
-
-    /**
-     * <code>string barcode = 2;</code>
+     * <code>string barcode = 1;</code>
      */
     var barcode: kotlin.String
       @JvmName("getBarcode")
@@ -50,14 +33,14 @@ object ProductKt {
         _builder.setBarcode(value)
       }
     /**
-     * <code>string barcode = 2;</code>
+     * <code>string barcode = 1;</code>
      */
     fun clearBarcode() {
       _builder.clearBarcode()
     }
 
     /**
-     * <code>string brand = 3;</code>
+     * <code>string brand = 2;</code>
      */
     var brand: kotlin.String
       @JvmName("getBrand")
@@ -67,14 +50,14 @@ object ProductKt {
         _builder.setBrand(value)
       }
     /**
-     * <code>string brand = 3;</code>
+     * <code>string brand = 2;</code>
      */
     fun clearBrand() {
       _builder.clearBrand()
     }
 
     /**
-     * <code>string name = 4;</code>
+     * <code>string name = 3;</code>
      */
     var name: kotlin.String
       @JvmName("getName")
@@ -84,31 +67,14 @@ object ProductKt {
         _builder.setName(value)
       }
     /**
-     * <code>string name = 4;</code>
+     * <code>string name = 3;</code>
      */
     fun clearName() {
       _builder.clearName()
     }
 
     /**
-     * <code>string size = 5;</code>
-     */
-    var size: kotlin.String
-      @JvmName("getSize")
-      get() = _builder.getSize()
-      @JvmName("setSize")
-      set(value) {
-        _builder.setSize(value)
-      }
-    /**
-     * <code>string size = 5;</code>
-     */
-    fun clearSize() {
-      _builder.clearSize()
-    }
-
-    /**
-     * <code>string ingredients = 6;</code>
+     * <code>string ingredients = 4;</code>
      */
     var ingredients: kotlin.String
       @JvmName("getIngredients")
@@ -118,14 +84,14 @@ object ProductKt {
         _builder.setIngredients(value)
       }
     /**
-     * <code>string ingredients = 6;</code>
+     * <code>string ingredients = 4;</code>
      */
     fun clearIngredients() {
       _builder.clearIngredients()
     }
 
     /**
-     * <code>string nutritionFacts = 7;</code>
+     * <code>string nutritionFacts = 5;</code>
      */
     var nutritionFacts: kotlin.String
       @JvmName("getNutritionFacts")
@@ -135,7 +101,7 @@ object ProductKt {
         _builder.setNutritionFacts(value)
       }
     /**
-     * <code>string nutritionFacts = 7;</code>
+     * <code>string nutritionFacts = 5;</code>
      */
     fun clearNutritionFacts() {
       _builder.clearNutritionFacts()
@@ -148,7 +114,7 @@ object ProductKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     class ImagesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @return A list containing the images.
      */
     val images: com.google.protobuf.kotlin.DslList<kotlin.String, ImagesProxy>
@@ -157,7 +123,7 @@ object ProductKt {
         _builder.getImagesList()
       )
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param value The images to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -166,7 +132,7 @@ object ProductKt {
       _builder.addImages(value)
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param value The images to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -175,7 +141,7 @@ object ProductKt {
       _builder.addImages(value)
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param values The images to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -184,7 +150,7 @@ object ProductKt {
       _builder.addAllImages(values)
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param values The images to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -193,7 +159,7 @@ object ProductKt {
       _builder.addAllImages(values)
     }
     /**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      * @param index The index to set the value at.
      * @param value The images to set.
      */
@@ -202,7 +168,7 @@ object ProductKt {
     operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ImagesProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setImages(index, value)
     }/**
-     * <code>repeated string images = 8;</code>
+     * <code>repeated string images = 6;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearImages")

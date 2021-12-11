@@ -8,108 +8,84 @@ public interface ProductOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1;</code>
-   * @return The id.
-   */
-  java.lang.String getId();
-  /**
-   * <code>string id = 1;</code>
-   * @return The bytes for id.
-   */
-  com.google.protobuf.ByteString
-      getIdBytes();
-
-  /**
-   * <code>string barcode = 2;</code>
+   * <code>string barcode = 1;</code>
    * @return The barcode.
    */
   java.lang.String getBarcode();
   /**
-   * <code>string barcode = 2;</code>
+   * <code>string barcode = 1;</code>
    * @return The bytes for barcode.
    */
   com.google.protobuf.ByteString
       getBarcodeBytes();
 
   /**
-   * <code>string brand = 3;</code>
+   * <code>string brand = 2;</code>
    * @return The brand.
    */
   java.lang.String getBrand();
   /**
-   * <code>string brand = 3;</code>
+   * <code>string brand = 2;</code>
    * @return The bytes for brand.
    */
   com.google.protobuf.ByteString
       getBrandBytes();
 
   /**
-   * <code>string name = 4;</code>
+   * <code>string name = 3;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 4;</code>
+   * <code>string name = 3;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string size = 5;</code>
-   * @return The size.
-   */
-  java.lang.String getSize();
-  /**
-   * <code>string size = 5;</code>
-   * @return The bytes for size.
-   */
-  com.google.protobuf.ByteString
-      getSizeBytes();
-
-  /**
-   * <code>string ingredients = 6;</code>
+   * <code>string ingredients = 4;</code>
    * @return The ingredients.
    */
   java.lang.String getIngredients();
   /**
-   * <code>string ingredients = 6;</code>
+   * <code>string ingredients = 4;</code>
    * @return The bytes for ingredients.
    */
   com.google.protobuf.ByteString
       getIngredientsBytes();
 
   /**
-   * <code>string nutritionFacts = 7;</code>
+   * <code>string nutritionFacts = 5;</code>
    * @return The nutritionFacts.
    */
   java.lang.String getNutritionFacts();
   /**
-   * <code>string nutritionFacts = 7;</code>
+   * <code>string nutritionFacts = 5;</code>
    * @return The bytes for nutritionFacts.
    */
   com.google.protobuf.ByteString
       getNutritionFactsBytes();
 
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @return A list containing the images.
    */
   java.util.List<java.lang.String>
       getImagesList();
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @return The count of images.
    */
   int getImagesCount();
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @param index The index of the element to return.
    * @return The images at the given index.
    */
   java.lang.String getImages(int index);
   /**
-   * <code>repeated string images = 8;</code>
+   * <code>repeated string images = 6;</code>
    * @param index The index of the value to return.
    * @return The bytes of the images at the given index.
    */
