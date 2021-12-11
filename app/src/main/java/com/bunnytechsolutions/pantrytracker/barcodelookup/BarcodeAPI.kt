@@ -11,11 +11,11 @@ class BarcodeAPI(private val apiKey: String) {
     private val client: OkHttpClient = OkHttpClient()
 
     fun lookup(productBarcode: String) : Product? {
-        val reqURL = "https://api.github.help".toHttpUrlOrNull()!!.newBuilder()
+        val reqURL = "https://api.barcodelookup.com/v3/products".toHttpUrlOrNull()!!.newBuilder()
             .addQueryParameter("barcode", productBarcode)
             .addQueryParameter("key", apiKey)
             .build()
-        val req = Request.Builder().url(reqURL).build()
+        val req = Request.Builder().url(reqURL).addHeader("accept", "application/json").build()
         val response = client.newCall(req).execute()
 
         val responseJSON = JSONObject(response.body!!.string())
@@ -31,7 +31,7 @@ class BarcodeAPI(private val apiKey: String) {
 
             val productImageURLs = productJSON.getJSONArray("images")
             for (i in 0 until productImageURLs.length()) {
-                builder.setImages(i, productImageURLs.getString(i))
+                builder.addImages(productImageURLs.getString(i))
             }
 
             return builder.build()
