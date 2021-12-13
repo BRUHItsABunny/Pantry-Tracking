@@ -9,7 +9,7 @@ class DBHelper (context: Context) :
 
     companion object {
         private const val DATABASE_VERSION = 1
-        private const val DATABASE_NAME = "PANTRY_DB"
+        private const val DATABASE_NAME = "pantrydb"
 
         const val TBL_PANTRY = "pantries"
         const val COL_PANTRY_ID = "id"
@@ -36,7 +36,7 @@ class DBHelper (context: Context) :
         const val COL_ENTRY_OBJECT = "object"
     }
 
-    override fun onCreate(db: SQLiteDatabase?) {
+    override fun onCreate(db: SQLiteDatabase) {
         var tblQuery = ("CREATE TABLE " + TBL_PRODUCT + "("
                 + COL_PRODUCT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COL_PRODUCT_BARCODE + " TEXT,"
@@ -47,14 +47,14 @@ class DBHelper (context: Context) :
                 + COL_PRODUCT_IMAGES + " TEXT,"
                 + COL_PRODUCT_OBJECT + " BLOB"
                 + ")")
-        db?.execSQL(tblQuery)
+        db.execSQL(tblQuery)
         tblQuery = ("CREATE TABLE " + TBL_PANTRY + "("
                 + COL_PANTRY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COL_PANTRY_UUID + " TEXT,"
                 + COL_PANTRY_NAME + " TEXT,"
                 + COL_PANTRY_OBJECT + " BLOB"
                 + ")")
-        db?.execSQL(tblQuery)
+        db.execSQL(tblQuery)
         tblQuery = ("CREATE TABLE " + TBL_ENTRY + "("
                 + COL_ENTRY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COL_ENTRY_UUID + " TEXT,"
@@ -63,10 +63,10 @@ class DBHelper (context: Context) :
                 + COL_ENTRY_EXPIRES + " INTEGER,"
                 + COL_ENTRY_OBJECT + " BLOB"
                 + ")")
-        db?.execSQL(tblQuery)
+        db.execSQL(tblQuery)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         onCreate(db)
     }
 
@@ -80,5 +80,9 @@ class DBHelper (context: Context) :
 
     fun getProductRepo() : ProductRepo {
         return ProductRepo(this)
+    }
+
+    fun deleteDatabase(context: Context) {
+        context.deleteDatabase(DATABASE_NAME)
     }
 }
