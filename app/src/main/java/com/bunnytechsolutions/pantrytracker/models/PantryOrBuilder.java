@@ -32,6 +32,21 @@ public interface PantryOrBuilder extends
       getNameBytes();
 
   /**
+   * <code>.google.protobuf.Timestamp created = 3;</code>
+   * @return Whether the created field is set.
+   */
+  boolean hasCreated();
+  /**
+   * <code>.google.protobuf.Timestamp created = 3;</code>
+   * @return The created.
+   */
+  com.google.protobuf.Timestamp getCreated();
+  /**
+   * <code>.google.protobuf.Timestamp created = 3;</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
+
+  /**
    * <pre>
    * Entries as list of entryId
    * </pre>

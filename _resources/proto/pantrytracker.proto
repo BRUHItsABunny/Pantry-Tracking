@@ -31,7 +31,8 @@ message Entry {
 message Pantry {
     string id = 1;
     string name = 2;
-    reserved 3 to 9;
+    google.protobuf.Timestamp created = 3;
+    reserved 4 to 9;
     // Entries as list of entryId
     repeated string entries = 10;
 }

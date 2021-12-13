@@ -57,6 +57,30 @@ object PantryKt {
     }
 
     /**
+     * <code>.google.protobuf.Timestamp created = 3;</code>
+     */
+    var created: com.google.protobuf.Timestamp
+      @JvmName("getCreated")
+      get() = _builder.getCreated()
+      @JvmName("setCreated")
+      set(value) {
+        _builder.setCreated(value)
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created = 3;</code>
+     */
+    fun clearCreated() {
+      _builder.clearCreated()
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created = 3;</code>
+     * @return Whether the created field is set.
+     */
+    fun hasCreated(): kotlin.Boolean {
+      return _builder.hasCreated()
+    }
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */

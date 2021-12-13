@@ -47,10 +47,12 @@ public final class PantryTrackerModels {
       "ires\030\004 \001(\0132\032.google.protobuf.Timestamp\022\020" +
       "\n\010reminder\030\005 \001(\010\022\027\n\017portionReminder\030\006 \001(" +
       "\010\022:\n\026expirePortionReminders\030\007 \003(\0132\032.goog" +
-      "le.protobuf.Timestamp\"9\n\006Pantry\022\n\n\002id\030\001 " +
-      "\001(\t\022\014\n\004name\030\002 \001(\t\022\017\n\007entries\030\n \003(\tJ\004\010\003\020\n" +
-      "BD\n+com.bunnytechsolutions.pantrytracker" +
-      ".modelsB\023PantryTrackerModelsP\001b\006proto3"
+      "le.protobuf.Timestamp\"f\n\006Pantry\022\n\n\002id\030\001 " +
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022+\n\007created\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022\017\n\007entries\030\n \003(\tJ" +
+      "\004\010\004\020\nBD\n+com.bunnytechsolutions.pantrytr" +
+      "acker.modelsB\023PantryTrackerModelsP\001b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,7 +76,7 @@ public final class PantryTrackerModels {
     internal_static_Pantry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Pantry_descriptor,
-        new java.lang.String[] { "Id", "Name", "Entries", });
+        new java.lang.String[] { "Id", "Name", "Created", "Entries", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
